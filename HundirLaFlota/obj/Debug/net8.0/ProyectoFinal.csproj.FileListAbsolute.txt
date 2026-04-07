@@ -1,0 +1,15 @@
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\bin\Debug\net8.0\ProyectoFinal.exe
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\bin\Debug\net8.0\ProyectoFinal.deps.json
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\bin\Debug\net8.0\ProyectoFinal.runtimeconfig.json
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\bin\Debug\net8.0\ProyectoFinal.dll
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\bin\Debug\net8.0\ProyectoFinal.pdb
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.AssemblyInfo.cs
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.sourcelink.json
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.dll
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\refint\ProyectoFinal.dll
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.pdb
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ProyectoFinal.genruntimeconfig.cache
+C:\Users\usuario\Desktop\DAW\Asignatures\ProyectoFinal\ProyectoFinalProgramacion\HundirLaFlota\obj\Debug\net8.0\ref\ProyectoFinal.dll

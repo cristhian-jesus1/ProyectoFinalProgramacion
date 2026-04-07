@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\practicasProgramacion\\segona avaluacio\\PROYECTO POO AV2\\PROYECTO-POO-AV2\\HundirLaFlota\\PF-POO.csproj",
-      "projectName": "PF-POO",
-      "projectPath": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\practicasProgramacion\\segona avaluacio\\PROYECTO POO AV2\\PROYECTO-POO-AV2\\HundirLaFlota\\PF-POO.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\ProyectoFinal\\ProyectoFinalProgramacion\\HundirLaFlota\\ProyectoFinal.csproj",
+      "projectName": "ProyectoFinal",
+      "projectPath": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\ProyectoFinal\\ProyectoFinalProgramacion\\HundirLaFlota\\ProyectoFinal.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\practicasProgramacion\\segona avaluacio\\PROYECTO POO AV2\\PROYECTO-POO-AV2\\HundirLaFlota\\obj\\",
+      "outputPath": "C:\\Users\\usuario\\Desktop\\DAW\\Asignatures\\ProyectoFinal\\ProyectoFinalProgramacion\\HundirLaFlota\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
