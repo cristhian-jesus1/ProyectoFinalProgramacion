@@ -1,0 +1,5 @@
+C:\Users\usuario\Desktop\DAW\Asignatures\practicasProgramacion\segona avaluacio\PROYECTO POO AV2\PROYECTO-POO-AV2\HundirLaFlota\obj\Debug\net8.0\PF-POO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Desktop\DAW\Asignatures\practicasProgramacion\segona avaluacio\PROYECTO POO AV2\PROYECTO-POO-AV2\HundirLaFlota\obj\Debug\net8.0\PF-POO.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\DAW\Asignatures\practicasProgramacion\segona avaluacio\PROYECTO POO AV2\PROYECTO-POO-AV2\HundirLaFlota\obj\Debug\net8.0\PF-POO.AssemblyInfo.cs
+C:\Users\usuario\Desktop\DAW\Asignatures\practicasProgramacion\segona avaluacio\PROYECTO POO AV2\PROYECTO-POO-AV2\HundirLaFlota\obj\Debug\net8.0\PF-POO.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\DAW\Asignatures\practicasProgramacion\segona avaluacio\PROYECTO POO AV2\PROYECTO-POO-AV2\HundirLaFlota\obj\Debug\net8.0\PF-POO.sourcelink.json
