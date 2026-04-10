@@ -1,10 +1,14 @@
+// Esta clase representa un barco del juego.
+// Guarda su nombre, tamano, impactos y casillas ocupadas.
 public class Barco
 {
     public string Nombre {get;}
     public int Tamanio {get;}
-    public int Impactos {get; private set;} // Con el private set nos permite cambiarlo pero solo desde dentro
+    // Los impactos solo se cambian desde el propio barco para evitar errores.
+    public int Impactos {get; private set;}
     public List<Casilla> Casillas {get;}  
 
+    // Crea un barco nuevo.
     public Barco(string nombre, int tamanio, int impactos)
     {
         this.Nombre = nombre;
@@ -13,11 +17,13 @@ public class Barco
         this.Casillas = new List<Casilla>();
     }
 
+    // Suma un impacto cuando el barco recibe un disparo.
     public void RecibirImpacto()
     {
         Impactos++;
     }
 
+    // Devuelve true si el barco ya esta hundido.
     public bool EstaHundido()
     {
         return Impactos >= Tamanio;

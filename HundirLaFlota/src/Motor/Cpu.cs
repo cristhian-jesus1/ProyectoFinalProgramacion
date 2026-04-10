@@ -1,7 +1,10 @@
+// Esta clase representa a la CPU.
+// Hereda de Jugador y añade logica automatica.
 class Cpu : Jugador{
     private List<CoordenadaGuardada>objetivos;
     private Random random;
 
+    // Aqui se preparan los disparos posibles y se mezclan al azar.
     public Cpu() : base("CPU")
     {
         random = new Random();
@@ -18,6 +21,7 @@ class Cpu : Jugador{
         Barajar();
     }
 
+    // Mezcla la lista para que la CPU no repita siempre el mismo orden.
     private void Barajar()
     {
         for (int i = objetivos.Count-1; i > 0; i--)
@@ -30,6 +34,7 @@ class Cpu : Jugador{
         }
     }
 
+    // Devuelve la siguiente casilla objetivo de la CPU.
     public CoordenadaGuardada ElegirObjetivo()
     {
         CoordenadaGuardada objetivo = objetivos[0];
@@ -37,6 +42,7 @@ class Cpu : Jugador{
         return objetivo;
     }
 
+    // Coloca los barcos de la CPU en posiciones validas al azar.
     public void ColocarFlotaAleatoria(List<Barco> barcos)
     {
         foreach (Barco barco in barcos)
@@ -51,5 +57,21 @@ class Cpu : Jugador{
                 colocado = Tablero.ColocarBarco(barco,fila,columna, horizontal);
             }
         }
+    }
+
+    // Sirve para guardar los objetivos que aun le quedan a la CPU.
+    public List<CoordenadaGuardada> ObtenerObjetivosPendientes()
+    {
+        return objetivos
+            .Select(objetivo => new CoordenadaGuardada(objetivo.Fila, objetivo.Columna))
+            .ToList();
+    }
+
+    // Sirve para restaurar esos objetivos al cargar una partida.
+    public void EstablecerObjetivos(List<CoordenadaGuardada> objetivosGuardados)
+    {
+        objetivos = objetivosGuardados
+            .Select(objetivo => new CoordenadaGuardada(objetivo.Fila, objetivo.Columna))
+            .ToList();
     }
 }

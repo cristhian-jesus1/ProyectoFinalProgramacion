@@ -1,5 +1,7 @@
 using System.Net.NetworkInformation;
 
+// Esta clase representa el tablero completo del juego.
+// Se encarga de colocar barcos, recibir disparos y reconstruirse al cargar partida.
 public class Tablero
 {
     bool todosHundidos;
@@ -8,6 +10,7 @@ public class Tablero
     List<Barco>barcos =  new List<Barco>();
     Casilla[,]casillas = new Casilla[10,10];
 
+    // Indica si ya no queda ningun barco vivo en el tablero.
     public bool TodosHundidos
     {
         get
@@ -15,6 +18,8 @@ public class Tablero
             return todosHundidos;
         }
     }
+
+    // Indica cuantos barcos siguen en pie.
     public int BarcosRestantes
     {
         get
@@ -23,11 +28,13 @@ public class Tablero
         }
     }
 
+    // Devuelve la lista de barcos colocados en este tablero.
     public List<Barco> ObtenerBarcos()
     {
         return barcos;
     }
 
+    // Crea un tablero vacio de 10x10.
     public Tablero(bool todosHundidos, int barcosRestantes)
     {
         this.todosHundidos = todosHundidos;
@@ -42,11 +49,12 @@ public class Tablero
         }
     }
 
+    // Comprueba si todos los barcos del tablero estan hundidos.
     public bool FlotaHundida(Barco EstaHundido)
     {
         foreach(Barco barco in barcos)
         {
-            if (barco != EstaHundido)
+            if (!barco.EstaHundido())
             {
                 return false;
             }
@@ -54,13 +62,14 @@ public class Tablero
         return true;
     }
 
+    // Cuenta cuantos barcos siguen sin hundirse.
     public int ContarBarcosSobrantes(Barco EstaHundido)
     {
         int contador = 0;
 
         foreach (Barco barco in barcos)
         {
-            if (barco != EstaHundido)
+            if (!barco.EstaHundido())
             {
                 contador++;
             }
@@ -68,11 +77,13 @@ public class Tablero
         return contador;
     }
 
+    // Devuelve una casilla concreta del tablero.
     public Casilla ObtenerCasilla(int filas,int columnas)
     {
         return casillas[filas,columnas];
     }
 
+    // Comprueba si un barco cabe en una posicion respetando las reglas.
     public bool PuedeColocar(Barco barco, int fila,int columna, bool esHorizontal)
     {
         for (int i = 0; i < barco.Tamanio; i++)
@@ -117,6 +128,7 @@ public class Tablero
         return true;
     }
 
+    // Coloca un barco si la posicion es valida.
     public bool ColocarBarco (Barco barco, int fila,int columna,bool esHorizontal)
     {
         if (PuedeColocar(barco,fila,columna,esHorizontal)== false)
@@ -147,6 +159,8 @@ public class Tablero
         }
         return true;
     }
+
+    // Procesa un disparo y devuelve si fue agua, impacto o hundido.
     public ResultadoDisparo Disparar(int fila,int columna)
     {
         Casilla casilla = casillas[fila,columna];
@@ -177,6 +191,8 @@ public class Tablero
             return ResultadoDisparo.Hundido;
         }else{return ResultadoDisparo.Impacto;}
     }
+
+    // Reconstruye un tablero normal a partir de un tablero guardado.
     public static Tablero CrearDesdeEstado(TableroGuardado estado)
     {
         int barcosRestantes = 0;
@@ -194,7 +210,7 @@ public class Tablero
 
         foreach (BarcoGuardado barcoGuardado in estado.Barcos)
         {
-            Barco barco = new Barco(barcoGuardado.Nombre, barcoGuardado.Tamanio, 0); // modificado de barcoGuardado.Impactos!!!!!
+            Barco barco = new Barco(barcoGuardado.Nombre, barcoGuardado.Tamanio, 0);
             foreach (CoordenadaGuardada coordenada in barcoGuardado.Casillas)
             {
                 Casilla casilla = tablero.casillas[coordenada.Fila,coordenada.Columna];
@@ -208,7 +224,8 @@ public class Tablero
         {
             tablero.casillas[coordenada.Fila,coordenada.Columna].YaDisparado();
         }
-        // 🔥 RECONSTRUIR IMPACTOS REALES
+
+        // Recalcula los impactos reales mirando las casillas que ya fueron disparadas.
         foreach (Barco barco in tablero.barcos)
         {
             foreach (Casilla casilla in barco.Casillas)

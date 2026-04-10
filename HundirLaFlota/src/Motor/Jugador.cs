@@ -1,3 +1,5 @@
+// Esta clase guarda los datos basicos de un jugador:
+// su nombre, su tablero y sus estadisticas.
 public class Jugador
 {
     public string Nombre {get;set;}
@@ -6,6 +8,7 @@ public class Jugador
     public int Aciertos{get;set;}
     public int Fallos{get;set;}
 
+    // Esta propiedad calcula el porcentaje de acierto del jugador.
     public double Precision
     {
         get
@@ -15,12 +18,14 @@ public class Jugador
         }
     }
 
+    // El constructor crea un jugador nuevo con su tablero vacio.
     public Jugador(string nombre)
     {
         Nombre = nombre;
         Tablero = new Tablero(false,5);
     }
 
+    // Este metodo actualiza las estadisticas despues de cada disparo.
     public void RegistrarDisparo(ResultadoDisparo resultado)
     {
         Disparos++;

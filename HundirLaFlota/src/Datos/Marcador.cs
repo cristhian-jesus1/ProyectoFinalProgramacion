@@ -1,11 +1,13 @@
 using System.Text.Json;
 
+// Esta clase guarda el ranking de mejores partidas ganadas.
 class Marcador
 {
     List<EntradaMarcador>entradas;
     string carpetaDatos;
     string rutaMarcador;
 
+    // Prepara la ruta del marcador y carga los datos si existen.
     public Marcador()
     {
         entradas = new List<EntradaMarcador>();
@@ -13,11 +15,14 @@ class Marcador
         rutaMarcador = Path.Combine(carpetaDatos,"marcador.json");
         Cargar();
     }
+
+    // Devuelve todas las entradas del ranking.
     public List<EntradaMarcador> ObtenerEntradas()
     {
         return entradas;
     }
 
+    // Añade una nueva entrada, la ordena y la guarda en disco.
     public void AgregarEntrada(EntradaMarcador entrada)
     {
         entradas.Add(entrada);
@@ -26,6 +31,7 @@ class Marcador
         Guardar();
     }
 
+    // Guarda el ranking en un archivo JSON.
     public void Guardar()
     {
         if (Directory.Exists(carpetaDatos)== false)
@@ -38,6 +44,8 @@ class Marcador
         string json = JsonSerializer.Serialize(entradas, opciones);
         File.WriteAllText(rutaMarcador, json);
     }
+
+    // Carga el ranking desde el archivo si ya existe.
     public void Cargar()
     {
         
@@ -68,6 +76,7 @@ class Marcador
         }
     }
 
+    // Ordena las partidas de mejor a peor puntuacion.
     void OrdenarEntradas()
     {
         
@@ -77,6 +86,7 @@ class Marcador
             .ToList();
     }
 
+    // Deja solo las 10 mejores posiciones del ranking.
     void LimitarTop10()
     {
         

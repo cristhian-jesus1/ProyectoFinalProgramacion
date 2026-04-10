@@ -1,3 +1,4 @@
+// Esta clase agrupa toda la informacion necesaria para guardar una partida completa.
 public class EstadoPartida
 {
     public JugadorGuardado Jugador {get;set;}
@@ -9,6 +10,7 @@ public class EstadoPartida
     public ConfigJuego Configuracion {get;set;}
     public List<CoordenadaGuardada>ObjetivosCpu{get;set;}
 
+    // Crea un estado vacio para rellenarlo luego.
     public EstadoPartida()
     {
         Jugador = new JugadorGuardado();
@@ -22,6 +24,7 @@ public class EstadoPartida
     }
 }
 
+// Esta clase guarda solo los datos simples de un jugador.
 public class JugadorGuardado
 {
     public string Nombre {get;set;}
@@ -29,17 +32,20 @@ public class JugadorGuardado
     public int Acierts {get;set;}
     public int Fallos{get;set;}
     
+    // Crea un jugador guardado vacio.
     public JugadorGuardado()
     {
         Nombre = "";
     }
 }
 
+// Esta clase guarda la informacion necesaria para reconstruir un tablero.
 public class TableroGuardado
 {
     public List<BarcoGuardado> Barcos {get;set;}
     public List<CoordenadaGuardada> CasillasDisparadas {get;set;}
 
+    // Crea listas vacias para barcos y disparos.
     public TableroGuardado()
     {
         Barcos = new List<BarcoGuardado>();
@@ -47,6 +53,7 @@ public class TableroGuardado
     }
 }
 
+// Esta clase guarda un barco en formato simple para JSON.
 public class BarcoGuardado
 {
     public string Nombre {get;set;}
@@ -54,6 +61,7 @@ public class BarcoGuardado
     public int Impactos {get;set;}
     public List<CoordenadaGuardada>Casillas {get;set;}
 
+    // Crea un barco guardado vacio.
     public BarcoGuardado()
     {
         Nombre = "";
@@ -61,11 +69,13 @@ public class BarcoGuardado
     }
 }
 
+// Esta clase guarda una coordenada del tablero.
 public class CoordenadaGuardada
 {
     public int Fila {get;set;}
     public int Columna {get;set;}
 
+    // Crea una coordenada con fila y columna.
     public CoordenadaGuardada(int fila,int columna)
     {
         Fila = fila;

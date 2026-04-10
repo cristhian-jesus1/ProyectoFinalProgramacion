@@ -1,5 +1,7 @@
+// Esta clase crea la lista de barcos que se usa en cada partida.
 public class Flota
 {
+    // Devuelve la flota completa del juego.
     public static List<Barco> CreacionFlota()
     {
         List<Barco>barcos = new List<Barco>();
@@ -13,4 +15,3 @@ public class Flota
        return barcos;
     }
 }
-

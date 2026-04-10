@@ -1,5 +1,4 @@
-// usas enum cuando algo solo puede ser una opción 
-// de una lista cerrada de posibilidades.
+// Este enum guarda los posibles resultados de un disparo.
 public enum ResultadoDisparo
 {
     Agua,

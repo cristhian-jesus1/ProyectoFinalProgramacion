@@ -1,3 +1,4 @@
+// Esta clase guarda colores reutilizables para pintar cosas en consola.
 public static class Colores
 {
     public static ConsoleColor CasillaVacia = ConsoleColor.DarkGray;
